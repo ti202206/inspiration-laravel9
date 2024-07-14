@@ -1,0 +1,20 @@
+.container {
+    max-width: 1200px;
+    margin: 80px auto 55px;
+    padding: 40px 0 20px;
+    background-color: $sec-bg;
+    border: 1px solid $bd-default;
+    box-shadow: 0 2px 4px $shdw-default;
+    min-height: 100vh;
+
+    @media only screen and (max-width: 600px) {
+        margin-top: 50px;
+        padding-top: 150px;
+    }
+}
+
+.section__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

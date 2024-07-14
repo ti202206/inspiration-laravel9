@@ -1,0 +1,103 @@
+@import "../../foundation/_variables";
+.submission{
+    &__page {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: $bg-page-margin;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        padding: 40px;
+    }
+
+    &__form {
+        margin: 7em 0 5em;
+        background-color: $form-bg;
+        padding: 20px 40px;
+        border: 1px solid $form-border;
+        box-shadow: 0 2px 4px $shdw-default;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        @media only screen and (max-width: 400px) {
+            margin-top: 160px;
+            padding: 0px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: $prim-bright;
+        text-align: center;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid $form-border;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+        &:focus {
+            border-color: $prim-bright;
+            box-shadow: 0 0 5px rgba($prim-bright, 0.5);
+            outline: none;
+        }
+        &-title{
+            padding: 5;
+            height: 60px;
+        }
+        &-overview{
+            padding: 5;
+            height: 110px;
+        }
+        &-content{
+            padding: 5;
+            height: 280px;
+        }
+    }
+
+    &__input-file {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 10px;
+        background-color: $btn-bg-bright;
+        color: $btn-txt-bright;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        outline: none;
+
+        &:hover {
+            background-color: $prim-med;
+        }
+    }
+
+    &__error {
+        color: $error-red;
+        margin: 0;
+    }
+
+    &__icon-preview {
+        display: block;
+        max-width: 50px;
+        max-height: 50px;
+        margin: 10px auto;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

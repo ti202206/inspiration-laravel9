@@ -1,0 +1,176 @@
+@import "../../sass/foundation/variables";
+
+.idea-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid $bd-default;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px $shdw-default;
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &__max-width {
+        @media screen and (min-width: 1200px) {
+            width: 100%;
+        }
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__title-category {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__title {
+        // margin: 0 10px 0 0;
+        margin: 0;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    &__summary {
+        margin: 0 5px 5px 0;
+        word-break: break-word;
+        white-space: normal;
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media only screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+
+        > * {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__review-count,
+    &__average-rating,
+    &__purchase-count,
+    &__favorite-count,
+    &__category,
+    &__updated-at,
+    &__price {
+        margin: 0 5px 0 0;
+    }
+
+    &__price {
+        width: 85px;
+    }
+
+    &__x-link {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none !important;
+        font-size: 14px;
+        transition: color 0.3s ease;
+
+        position: relative;
+        transition: color 0.3s;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: transparent;
+            transition: width 0.3s;
+        }
+
+        &:hover::before {
+            width: 100%;
+            background-color: $txt-link-hover;
+        }
+
+        &:active {
+            background-color: $txt-link-bg;
+            color: $txt-nav-active;
+            transition: none;
+        }
+
+        p {
+            color: $txt-nav-bright;
+            margin: 0;
+
+            &:active {
+                background-color: $txt-link-bg;
+                color: $txt-nav-active;
+                transition: none;
+            }
+        }
+    }
+
+    &__x-icon {
+        background-color: $x-bg;
+        color: $x-txt;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+
+        i {
+            font-size: 15px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+
+        @media screen and (max-width: 600px) {
+            margin: 3px;
+            flex-direction: row;
+        }
+    }
+
+    &__button {
+        padding: 8px 15px;
+        margin-top: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: $btn-bg-bright;
+        color: $btn-txt-bright;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            background-color: $prim-med;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px rgba($prim-bright, 0.5);
+        }
+
+        &:active {
+            background-color: $prim-med;
+        }
+
+        @media screen and (max-width: 600px) {
+            flex: 1;
+            margin: 0 5px;
+        }
+    }
+}
